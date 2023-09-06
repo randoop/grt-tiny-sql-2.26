@@ -21,7 +21,7 @@ Some helper methods for tinySQL
 */
 public class Utils
 {
-  // JLex (the lexical analyzer) doesn´t support unicode
+  // JLex (the lexical analyzer) doesn't support unicode
   // so we must play around with the different code pages:
   // "Cp437"  = 7 bit MS-DOS, US-ASCII
   // "Cp850"  = 8 bit MS-DOS, Multilingual Latin 1,   &auml; = 0x83 = 131

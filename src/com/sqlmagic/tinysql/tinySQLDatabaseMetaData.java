@@ -1223,7 +1223,7 @@ public class tinySQLDatabaseMetaData implements java.sql.DatabaseMetaData {
      */
         public int getMaxRowSize() {
           return 0;
-          // The maxRowSize() depends on each dBase file, so it can´t be told here generally
+          // The maxRowSize() depends on each dBase file, so it can't be told here generally
           // return connection.getTinySqlHandle().getTableHandle("xy").getRecordLength();
         }
 

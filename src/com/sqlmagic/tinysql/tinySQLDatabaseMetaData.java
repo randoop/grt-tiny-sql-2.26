@@ -2780,6 +2780,58 @@ public class tinySQLDatabaseMetaData implements java.sql.DatabaseMetaData {
     public Connection getConnection() {
       return connection;
     }
+
+     // ------------------- JDBC 3.0 -------------------------
+
+    // from java.sql.DatabaseMetaData.java
+    public boolean supportsSavepoints() throws SQLException {
+        return false;
+    }
+    public boolean supportsNamedParameters() throws SQLException {
+        return false;
+    }
+    public boolean supportsMultipleOpenResults() throws SQLException {
+        return false;
+    }
+    public boolean supportsGetGeneratedKeys() throws SQLException {
+        return false;
+    }
+    public ResultSet getSuperTypes(String catalog, String schemaPattern,
+                            String typeNamePattern) throws SQLException {
+        return null;
+    }
+    public ResultSet getSuperTables(String catalog, String schemaPattern,
+                             String tableNamePattern) throws SQLException {
+        return null;
+    }
+    public ResultSet getAttributes(String catalog, String schemaPattern,
+                            String typeNamePattern, String attributeNamePattern) throws SQLException {
+        return null;
+    }
+    public boolean supportsResultSetHoldability(int holdability) throws SQLException {
+        return false;
+    }
+    public int getResultSetHoldability() throws SQLException {
+        return -1;
+    }
+    public int getDatabaseMajorVersion() throws SQLException {
+        return -1;
+    }
+    public int getDatabaseMinorVersion() throws SQLException {
+        return -1;
+    }
+    public int getJDBCMajorVersion() throws SQLException {
+        return -1;
+    }
+    public int getJDBCMinorVersion() throws SQLException {
+        return -1;
+    }
+    public int getSQLStateType() throws SQLException {
+        return -1;
+    }
+    public boolean locatorsUpdateCopy() throws SQLException {
+        return false;
+    }
 }
 
 

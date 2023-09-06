@@ -2638,4 +2638,29 @@ public class tinySQLResultSet implements java.sql.ResultSet {
       throw new SQLException("tinySQL does not support getTimestamp.");
     }
 
+    //-------------------------- JDBC 3.0 ----------------------------------------
+
+    // from java.sql.Resultset.java
+    public java.net.URL getURL(int columnIndex) throws SQLException {
+        return null;
+    }
+    public java.net.URL getURL(String columnLabel) throws SQLException {
+        return null;
+    }
+    public void updateRef(int columnIndex, java.sql.Ref x) throws SQLException {
+    }
+    public void updateRef(String columnLabel, java.sql.Ref x) throws SQLException {
+    }
+    public void updateBlob(int columnIndex, java.sql.Blob x) throws SQLException {
+    }
+    public void updateBlob(String columnLabel, java.sql.Blob x) throws SQLException {
+    }
+    public void updateClob(int columnIndex, java.sql.Clob x) throws SQLException {
+    }
+    public void updateClob(String columnLabel, java.sql.Clob x) throws SQLException {
+    }
+    public void updateArray(int columnIndex, java.sql.Array x) throws SQLException {
+    }
+    public void updateArray(String columnLabel, java.sql.Array x) throws SQLException {
+    }
 }

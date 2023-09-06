@@ -20,14 +20,11 @@
 #
 #---------------------------------------------------------------
 
-INSTALL_CLASS_DIR = ../../../../classes
-INSTALL_DIR = $(INSTALL_CLASS_DIR)/com/sqlmagic/tinySQL
-
-JAVAC = javac -d $(INSTALL_CLASS_DIR) -classpath $(INSTALL_CLASS_DIR)
-
 ROOT_DIR = ../../../../
 JAR_DIR = $(ROOT_DIR)classes
-CLASS_DIR = $(JAR_DIR)/com/sqlmagic/tinySQL
+CLASS_DIR = $(JAR_DIR)/com/sqlmagic/tinysql
+
+JAVAC = javac -source 1.5 -target 1.5 -d $(JAR_DIR) -Xbootclasspath/p:jdk5.rt.jar -classpath $(JAR_DIR) *.java
 
 OBJECTS=$(CLASS_DIR)/Utils.class \
 	$(CLASS_DIR)/tinySQLException.class \
@@ -68,7 +65,7 @@ OBJECTS=$(CLASS_DIR)/Utils.class \
 #
 jar: $(OBJECTS)
 
-	(cd $(INSTALL_CLASS_DIR);jar cvfm tinySQL.jar MANIFEST.MF com/sqlmagic/tinysql/*.class)
+	(cd $(JAR_DIR);jar cvfm tinySQL.jar MANIFEST.MF com/sqlmagic/tinysql/*.class)
 #	jar cvfm $(INSTALL_CLASS_DIR)/tinySQL.jar  $(INSTALL_CLASS_DIR)/MANIFEST.MF -C $(CLASS_DIR)/*.class
 #
 # The following rule can be used to make individual class files.  This is 
@@ -94,7 +91,7 @@ all: $(OBJECTS)
 
 clean: 
 	rm -f *.class 
-	rm -f $(INSTALL_DIR)/*.class 
-	rm -f $(INSTALL_CLASS_DIR)/*.class
-	rm -f $(INSTALL_CLASS_DIR)/tinySQL.jar
+	rm -f $(CLASS_DIR)/*.class
+	rm -f $(JAR_DIR)/*.class
+	rm -f $(JAR_DIR)/tinySQL.jar
 
